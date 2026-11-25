@@ -43,7 +43,9 @@ void play_boss3();
 void move_boss(signed char increase_x, signed char increase_y, unsigned char tile, unsigned char offset);
 void lunge(unsigned char increase);
 void circle_movement();
-void move_boss_3(signed char xinc, signed char yinc);
+void draw_sub_boss_life(void);
+void boss3_clear_map(void);
+void boss3_init(void);
 
 // general.h
 unsigned char collide (void);

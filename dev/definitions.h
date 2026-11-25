@@ -275,6 +275,7 @@ unsigned char objs_old, keys_old, life_old, killed_old;
 	unsigned char *level_str = "LEVEL 0X - 0X";
 	unsigned char *level_boss_1_str = "KING ANT";
 	unsigned char *level_boss_2_str = "SIR BONES";
+	unsigned char *level_boss_3_str = "MARTIAN MARCIAL";
 	unsigned char *level_bonus_str = "BONUS LEVEL";
 	#endif
 	unsigned char silent_level = 0;

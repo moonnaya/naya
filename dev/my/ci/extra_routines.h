@@ -60,6 +60,13 @@ if (stage_clear_animation == 1) {
         stage_clear_animation = 0;
         animate_dog = 0;
         time_animation = TIME_DOG_ANIMATION;
+        if (slevel == 3 && level == MAX_LEVELS - 1) {
+            // Ultimo jefe derrotado: fin del juego
+            boss = 0;
+            success = 1;
+            playing = 0;
+        } else {
+        boss = 0;
         boss = 0;
         
         if (slevel == 4) {
@@ -89,12 +96,7 @@ if (stage_clear_animation == 1) {
             #include "my/level_boss_screen.h"
             gpy = PLAYER_INI_Y << 4; p_y = gpy << 6 - 8;
             if (level == 2) {
-                boss_action = 0;
-                b_aux = 0;
-                boss_aux_1 = 1; //izq
-                boss_x = 12;
-                boss_y = 1;
-                boss_aux_2 = 0; // total balas
+                boss3_init ();
             }
         } else if (slevel == 4) {
             n_pant = 1;
@@ -118,6 +120,6 @@ if (stage_clear_animation == 1) {
 
         sp_UpdateNow();
         get_resource (MARCO_BIN, 16384);
-         
+        }
     }
 }
