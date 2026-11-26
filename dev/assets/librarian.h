@@ -26,11 +26,11 @@ RESOURCE resources [] = {
     { 6, 0xCDAC },
     { 6, 0xD419 },
     { 6, 0xD9C0 },
+    { 4, 0xFC3E },
     { 6, 0xDF3A },
-    { 4, 0xFC69 },
     { 3, 0xFD23 },
     { 3, 0xFF18 },
-    { 6, 0xE2D9 }
+    { 6, 0xE249 }
 };
 
 #define LEVEL3C_BIN                     0
