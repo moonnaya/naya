@@ -15,22 +15,22 @@ RESOURCE resources [] = {
     { 3, 0xDF63 },
     { 3, 0xEE68 },
     { 4, 0xC000 },
-    { 4, 0xCEA4 },
-    { 4, 0xD716 },
-    { 4, 0xDEFF },
-    { 4, 0xE69A },
-    { 4, 0xEDF7 },
-    { 4, 0xF52F },
+    { 4, 0xCEA5 },
+    { 4, 0xD717 },
+    { 4, 0xDF00 },
+    { 4, 0xE69B },
+    { 4, 0xEE08 },
+    { 4, 0xF565 },
     { 6, 0xC000 },
     { 6, 0xC6D6 },
     { 6, 0xCD46 },
     { 6, 0xD3B3 },
-    { 6, 0xD959 },
-    { 4, 0xFC05 },
-    { 6, 0xDE67 },
+    { 6, 0xD95A },
+    { 4, 0xFC3B },
+    { 6, 0xDED4 },
     { 3, 0xFD23 },
     { 3, 0xFF18 },
-    { 6, 0xE176 }
+    { 6, 0xE1E3 }
 };
 
 #define LEVEL3C_BIN                     0
@@ -41,8 +41,8 @@ RESOURCE resources [] = {
 #define ZONEA_BIN                       5
 #define ZONEB_BIN                       6
 #define TITLE_BIN                       7
-#define INTRO7_BIN                      8
-#define INTRO3_BIN                      9
+#define INTRO3_BIN                      8
+#define INTRO7_BIN                      9
 #define INTRO5_BIN                      10
 #define INTRO6_BIN                      11
 #define ENDING_BIN                      12

@@ -3,3 +3,4 @@
 
 // Jefe 3: quitar del mapa los tiles de OVNI sueltos y pintar el OVNI.
 if (boss == 1 && level == 2) boss3_clear_map ();
+draw_player_lives();
