@@ -1,9 +1,9 @@
-DEFINED_CRT_ORG_CODE            = $0001 ; const, local, , zx82_crt0, , C:/Users/juanf/AppData/Local/Temp/zcc00001D2063D73/zcc_opt.def:3
-CRT_ORG_CODE                    = $5DC0 ; const, local, , zx82_crt0, , C:/Users/juanf/AppData/Local/Temp/zcc00001D2063D73/zcc_opt.def:4
-DEFINED_STACKPTR                = $0001 ; const, local, , zx82_crt0, , C:/Users/juanf/AppData/Local/Temp/zcc00001D2063D73/zcc_opt.def:11
-STACKPTR                        = $5DBF ; const, local, , zx82_crt0, , C:/Users/juanf/AppData/Local/Temp/zcc00001D2063D73/zcc_opt.def:12
-DEFINED_REGISTER_SP             = $0001 ; const, local, , zx82_crt0, , C:/Users/juanf/AppData/Local/Temp/zcc00001D2063D73/zcc_opt.def:19
-REGISTER_SP                     = $5DBF ; const, local, , zx82_crt0, , C:/Users/juanf/AppData/Local/Temp/zcc00001D2063D73/zcc_opt.def:20
+DEFINED_CRT_ORG_CODE            = $0001 ; const, local, , zx82_crt0, , C:/Users/juanf/AppData/Local/Temp/zcc000019FC73063/zcc_opt.def:3
+CRT_ORG_CODE                    = $5DC0 ; const, local, , zx82_crt0, , C:/Users/juanf/AppData/Local/Temp/zcc000019FC73063/zcc_opt.def:4
+DEFINED_STACKPTR                = $0001 ; const, local, , zx82_crt0, , C:/Users/juanf/AppData/Local/Temp/zcc000019FC73063/zcc_opt.def:11
+STACKPTR                        = $5DBF ; const, local, , zx82_crt0, , C:/Users/juanf/AppData/Local/Temp/zcc000019FC73063/zcc_opt.def:12
+DEFINED_REGISTER_SP             = $0001 ; const, local, , zx82_crt0, , C:/Users/juanf/AppData/Local/Temp/zcc000019FC73063/zcc_opt.def:19
+REGISTER_SP                     = $5DBF ; const, local, , zx82_crt0, , C:/Users/juanf/AppData/Local/Temp/zcc000019FC73063/zcc_opt.def:20
 start                           = $5DC0 ; addr, local, , zx82_crt0, , crt.asm:15
 vpClipStruct                    = $78B5 ; addr, local, , mk1_c, code_compiler, definitions.h:4
 fsClipStruct                    = $78B9 ; addr, local, , mk1_c, code_compiler, definitions.h:4
