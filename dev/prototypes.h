@@ -46,6 +46,8 @@ void circle_movement();
 void draw_sub_boss_life(void);
 void boss3_clear_map(void);
 void boss3_init(void);
+void espera_musica (int espera);
+unsigned char wyz_song_over (void);
 
 // general.h
 unsigned char collide (void);

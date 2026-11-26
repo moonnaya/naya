@@ -221,7 +221,7 @@ void main (void) {
 					}
 				} else {
 					#ifdef MODE_128K
-						PLAY_MUSIC (13);
+						PLAY_MUSIC (12);
 					#endif
 
 					#if defined(TIMER_ENABLE) && defined(TIMER_GAMEOVER_0) && defined(SHOW_TIMER_OVER)

@@ -71,6 +71,14 @@ void espera_activa (int espera) {
 	} while (--espera);
 }
 
+void espera_musica (int espera) {
+	do {
+		#asm
+			halt
+		#endasm
+	} while (--espera && !wyz_song_over ());
+}
+
 #ifndef COMPRESSED_LEVELS
 	#if !defined DEACTIVATE_KEYS && MAX_CERROJOS > 0
 		void locks_init (void) {

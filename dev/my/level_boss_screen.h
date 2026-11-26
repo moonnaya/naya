@@ -22,6 +22,6 @@
 	// 	beep_fx (1);
 	// #endif
 
-	espera_activa (300);
+	espera_musica (288);
 	PLAY_MUSIC (10);
 }

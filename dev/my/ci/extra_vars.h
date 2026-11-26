@@ -5,6 +5,12 @@ typedef struct
    signed char x,y;
 } POINT;
 
+const unsigned char pic_resource [] = {
+	INTRO1_BIN, INTRO2_BIN, INTRO3_BIN
+};
+
+const unsigned char splash_screens [] = { LOGO_BIN, DEDICADO_BIN };
+
 unsigned char boss = 1;
 unsigned char boss_1_lunge = BOSS_1_TIME_LUNGE;;
 unsigned char boss_1_counter = 32;
@@ -32,8 +38,6 @@ typedef struct {
 BOSS_SHOOT boss_shoot[6];
 
 unsigned char gbx, gby;
-
-const unsigned char splash_screens [] = { LOGO_BIN, CONTROLS_BIN, DEDICADO_BIN };
 
 POINT boss_vector_path[10] = {
     {0,-2}, {2, -2}, {2, -2}, {2,-2}, {2,0}, 

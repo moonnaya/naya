@@ -331,3 +331,15 @@ void clear_gamezone() {
 		}
 	}
 }
+
+void do_cutscene (unsigned char ini, unsigned char fin, unsigned char music) {
+    unsigned char intro_iterator = 0;
+	for (intro_iterator = ini; intro_iterator <= fin; intro_iterator ++) {
+		sp_UpdateNow ();
+		blackout_area ();
+		get_resource (pic_resource[intro_iterator], 16384);
+		espera_activa (250);
+		sp_WaitForNoKey ();
+	}
+	blackout_area ();	
+}

@@ -18,19 +18,19 @@ RESOURCE resources [] = {
     { 4, 0xCEA4 },
     { 4, 0xD716 },
     { 4, 0xDEFF },
-    { 4, 0xE66E },
-    { 4, 0xEDCB },
-    { 4, 0xF4A1 },
+    { 4, 0xE69A },
+    { 4, 0xEDF7 },
+    { 4, 0xF52F },
     { 6, 0xC000 },
-    { 6, 0xC678 },
-    { 6, 0xCCE8 },
-    { 6, 0xD355 },
-    { 6, 0xD9A9 },
-    { 6, 0xDFB1 },
-    { 4, 0xFB77 },
-    { 6, 0xE5AB },
+    { 6, 0xC6D6 },
+    { 6, 0xCD46 },
+    { 6, 0xD3B3 },
+    { 6, 0xD959 },
+    { 4, 0xFC05 },
+    { 6, 0xDE67 },
     { 3, 0xFD23 },
-    { 3, 0xFE02 }
+    { 3, 0xFF18 },
+    { 6, 0xE176 }
 };
 
 #define LEVEL3C_BIN                     0
@@ -42,16 +42,16 @@ RESOURCE resources [] = {
 #define ZONEB_BIN                       6
 #define TITLE_BIN                       7
 #define INTRO7_BIN                      8
-#define INTRO5_BIN                      9
-#define INTRO6_BIN                      10
-#define INTRO2_BIN                      11
+#define INTRO3_BIN                      9
+#define INTRO5_BIN                      10
+#define INTRO6_BIN                      11
 #define ENDING_BIN                      12
 #define INTRO4_BIN                      13
-#define INTRO3_BIN                      14
-#define INTRO1_BIN                      15
+#define INTRO1_BIN                      14
+#define INTRO2_BIN                      15
 #define DEDICADO_BIN                    16
-#define LOGO_BIN                        17
-#define CONTROLS_BIN                    18
+#define CONTROLS_BIN                    17
+#define LOGO_BIN                        18
 #define MARCO_BIN                       19
 #define LEVEL_SCREEN_TSC_BIN            20
 

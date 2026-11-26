@@ -150,10 +150,10 @@
 			faps = 0;
 		}
 
-		if (dead_animation == 1) {
+		if (dead_animation == 1 && fire_count_animation) {
 			fire_count_animation--;
 		}
-		if (dead_animation == 1 && fire_count_animation == 0) {
+		if (dead_animation == 1 && fire_count_animation == 0 && (song_playing != 11 || wyz_song_over ())) {
 			dead_animation = 0;
 			p_total_lifes--;
 			draw_player_lives();

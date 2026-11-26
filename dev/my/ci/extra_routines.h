@@ -56,6 +56,8 @@ if (stage_clear_animation == 1) {
         print_stage_clear();
         time_animation--;
         do_not_move = 1;
+    } else if (song_playing == 1 && !wyz_song_over ()) {
+        do_not_move = 1; 
     } else {
         stage_clear_animation = 0;
         animate_dog = 0;

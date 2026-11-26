@@ -32,7 +32,7 @@
 #define COMPRESSED_LEVELS 				// use levels.h instead of mapa.h and enems.h (!)
 //#define PER_LEVEL_SPRITESET 				// use a different spriteset for each level in 48K
 #define MAX_LEVELS				3		// # of compressed levels
-#define DEBUG_START_AT_BOSS3				// PRUEBAS: al empezar, ir directo al jefe 3. Comenta esta linea para jugar normal.
+//#define DEBUG_START_AT_BOSS3				// PRUEBAS: al empezar, ir directo al jefe 3. Comenta esta linea para jugar normal.
 //#define REFILL_ME 						// If defined, refill player on each level
 //#define NO_RESET_STATS 						// If defined, player stats are not reset per level
 

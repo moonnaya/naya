@@ -17,6 +17,7 @@ void game_ending (void) {
 	#ifdef MODE_128K
 		// Resource 2 = ending
 		get_resource (ENDING_BIN, 16384);
+		PLAY_MUSIC (13);
 	#else
 		#asm
 			ld hl, _s_ending
@@ -31,7 +32,11 @@ void game_ending (void) {
 		lame_sound ();
 	#endif
 	
-	espera_activa (500);
+	#ifdef MODE_128K
+		espera_musica (3000);
+	#else
+		espera_activa (500);
+	#endif
 }
 
 void game_over (void) {
@@ -50,7 +55,12 @@ void game_over (void) {
 		lame_sound ();
 	#endif
 
-	espera_activa (800);
+	#ifdef MODE_128K
+	espera_musica (800);
+		espera_activa (50);
+	#else
+		espera_activa (800);
+	#endif
 }
 
 #if defined(TIMER_ENABLE) && defined(SHOW_TIMER_OVER)

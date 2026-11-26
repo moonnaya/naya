@@ -8,6 +8,12 @@
 	blackout_area ();
 	espera_activa (10);
 
+	if (level == 0 && slevel == 0) {
+		do_cutscene (0, 2, 1);
+		blackout();
+		blackout_area ();
+	} 
+
 	if (slevel == 3) {
     	game_over();
 	}
@@ -19,7 +25,7 @@
 	_x = 8; _y = 12; _t = 71; _gp_gen = level_str; print_str ();
 	sp_UpdateNow ();
 
-	espera_activa (210);
+	espera_musica (300);
 	PLAY_MUSIC (levels [level].music_id + slevel);
 	
 }

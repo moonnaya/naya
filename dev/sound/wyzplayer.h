@@ -15,6 +15,7 @@
 #define INICIAEFECTO		0xC47E	// INICIA_EFECTO	EQU 0C46BH
 #define CARGA_CANCION		0xC087	// CARGA_CANCION	EQU 0C087H
 #define SILENCIA_PLAYER		0xC062	// PLAYER_OFF		EQU 0C062H
+#define WYZ_INTERR 0xC5A2
 
 // Start.
 
@@ -70,6 +71,8 @@ void __FASTCALL__ wyz_play_music (unsigned char song_number) {
 			call SetRAMBank
 			; __FASTCALL__ -> song_number is in l!
 			ld  a, l
+			ld  hl, WYZ_INTERR
+			res 4, (hl)
 			call CARGA_CANCION
 			ld  b, 0
 			call SetRAMBank
@@ -87,5 +90,25 @@ void wyz_stop_sound (void) {
 			ld  b,0
 			call SetRAMBank
 			ei
+	#endasm
+}
+
+// Devuelve 1 si la cancion actual ya termino (solo canciones SIN loop).
+unsigned char wyz_song_over (void) {
+	#asm
+			di
+			ld  b, 1
+			call SetRAMBank
+			ld  a, (WYZ_INTERR)
+			ld  d, a
+			ld  b, 0
+			call SetRAMBank
+			ei
+			ld  a, d
+			and 2
+			xor 2
+			rrca
+			ld  l, a
+			ld  h, 0
 	#endasm
 }
