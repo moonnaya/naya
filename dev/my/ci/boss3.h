@@ -41,9 +41,9 @@
 #define B3_DYING	10
 #define B3_DEAD		99
 
-/*#define BOSS3_ENEMY_FIRST	4
+#define BOSS3_ENEMY_FIRST	4
 #define BOSS3_ENEMY_SECS	6
-#define BOSS3_ENEMY_OFF		20*/
+#define BOSS3_ENEMY_OFF		20
 
 unsigned char boss3_state = B3_TOP;
 unsigned char boss3_tx = 0;			// objetivo horizontal (columna)
@@ -54,7 +54,7 @@ unsigned char boss3_k = 0;			// contador de celdas del pintado
 unsigned char boss3_i = 0;			// contador de balas
 unsigned char boss3_cx = 0;
 unsigned char boss3_cy = 0;
-/*
+
 unsigned char boss3_wait = 0;
 unsigned char boss3_last = 0;
 unsigned char boss3_enemy [10] = { 224, 96, 0, 96, 224, 96, 254, 0, 1, 2 };
@@ -72,7 +72,7 @@ void boss3_enemy_hide (void) {
 	p = (unsigned char *) malotes + BOSS3_ENEMY_OFF;
 	p [0] = p [1] = 255;
 	p [8] = 0;
-}*/
+}
 
 // Pinta las 4 celdas del OVNI. mode: 0 = dibujar, 1 = explosion, 2 = restaurar el fondo.
 // Celdas: 0,1,2 = platillo (boss_x + k, boss_y); 3 = marciano (boss_x + 1, boss_y - 1).
@@ -125,9 +125,9 @@ void boss3_init (void) {
 	boss3_ty = BOSS3_TOP_Y;
 	_en_life_boss = BOSS3_LIFE;
 
-    /*boss3_enemy_hide ();
+    boss3_enemy_hide ();
 	boss3_wait = BOSS3_ENEMY_FIRST;
-	boss3_last = timer_t;*/
+	boss3_last = timer_t;
 
 	// El jugador empieza de pie sobre la plataforma.
 	gpx = BOSS3_PLAYER_X << 4; p_x = gpx << 6;
@@ -149,7 +149,7 @@ void boss3_hit (void) {
 		check_points ();
 		PLAY_SOUND (SFX_KILL_ENEMY_SHOOT);
 		PLAY_MUSIC (1);
-        //boss3_enemy_hide ();
+        boss3_enemy_hide ();
 		boss3_paint (1);
 	}
 }
@@ -215,12 +215,12 @@ void play_boss3 (void) {
 		return;
 	}
 
-    /*if (boss3_last != timer_t) {
+    if (boss3_last != timer_t) {
         boss3_last = timer_t;
         if (boss3_wait) boss3_wait --;
 	}
 	if (((unsigned char *) malotes) [BOSS3_ENEMY_OFF + 8] == 1) boss3_wait = BOSS3_ENEMY_SECS;
-	else if (boss3_wait == 0) boss3_spawn ();*/
+	else if (boss3_wait == 0) boss3_spawn ();
 
 	// Solo se puede herir durante el barrido bajo.
 	if (boss3_state == B3_LOW) {

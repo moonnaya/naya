@@ -338,3 +338,7 @@ void do_cutscene (unsigned char ini, unsigned char fin, unsigned char music) {
 	}
 	blackout_area ();	
 }
+
+void show_level_screen (void) {
+	#include "my/level_screen.h"
+}
