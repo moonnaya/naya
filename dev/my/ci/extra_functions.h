@@ -271,7 +271,6 @@ void draw_player_lives(void) {
 }
 
 void save_object(void) {
-    objects[objects_index].gpit = p_tx + (p_ty * 15);
     objects[objects_index].x =  p_tx;
     objects[objects_index].y =  p_ty;
     objects[objects_index].n_pant = n_pant;
@@ -300,19 +299,15 @@ void check_points() {
     }
 }
 
-void print_points() {    
+void print_points() {
+    unsigned int v;
+    unsigned char i;
+    v = points;
     _n = 5;
-    rdc = (points / 10000);
-    _x = 26; _y = 0; _t = rdc; print_number_wan ();
-    rdc = (points / 1000) % 10;
-    _x = 27; _y = 0; _t = rdc; print_number_wan ();
-    rdc = (points / 100) % 10;
-    _x = 28; _y = 0; _t = rdc; print_number_wan ();
-    rdc = (points / 10) % 10;
-    _x = 29; _y = 0; _t = rdc; print_number_wan ();
-    rdc = points % 10;
-    _x = 30; _y = 0; _t = rdc; print_number_wan ();
-
+    for (i = 30; i >= 26; i --) {
+        _x = i; _y = 0; _t = v % 10; v = v / 10;
+        print_number_wan ();
+    }
 }
 
 void draw_player_sublives(void) {

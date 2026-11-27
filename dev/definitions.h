@@ -343,6 +343,6 @@ typedef struct
 	unsigned char n_pant, x, y, gpit;
 } OBJECT;
 
-OBJECT objects[100];
+OBJECT objects[70];
 unsigned char objects_index;
 unsigned char dead_animation = 0;

@@ -89,12 +89,3 @@ void game_over (void) {
 	}
 #endif
 
-#ifdef COMPRESSED_LEVELS
-	void zone_clear (void) {
-		_x = 10; _y = 11; _t = 79; _gp_gen = spacer; print_str ();
-		_x = 10; _y = 12; _t = 79; _gp_gen = (unsigned char *)(" ZONE CLEAR "); print_str ();
-		_x = 10; _y = 13; _t = 79; _gp_gen = spacer; print_str ();
-		sp_UpdateNowEx (0);
-		espera_activa (250);			
-	}
-#endif

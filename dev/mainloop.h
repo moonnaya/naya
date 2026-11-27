@@ -168,7 +168,7 @@ void main (void) {
 		{
 			#ifdef COMPRESSED_LEVELS
 				if (silent_level == 0) {
-					#include "my/level_screen.h"
+					show_level_screen ();
 				}
 				silent_level = 0;
 			

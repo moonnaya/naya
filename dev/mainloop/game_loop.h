@@ -202,10 +202,8 @@
 						clear_sprites ();
 						time_over ();
 						timer_zero = 0;
-						level++;
-						slevel = 0;
- 						prepare_level ();
-						#include "my/level_screen.h"
+						stage_clear_animation = 1;
+						time_animation = 1;
 					} else {
 						#ifdef SHOW_TIMER_OVER
 						#ifndef TIMER_SCRIPT_0

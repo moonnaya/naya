@@ -85,9 +85,6 @@ if (stage_clear_animation == 1) {
         gpx = PLAYER_INI_X << 4; p_x = gpx << 6;
         gpy = PLAYER_INI_Y << 4; p_y = gpy << 6;
 
-        for (rda = 0; rda < 80; rda++) {
-			objects[rda].n_pant = 99; objects[rda].gpit = objects[rda].x = objects[rda].y = 255;
-		}
         objects_index = 0;
         player_init();
         if (slevel == 3) {
@@ -112,7 +109,7 @@ if (stage_clear_animation == 1) {
             p_life = 2;
             max_shoots = 1;
             timer_t = 99;  
-            #include "my/level_screen.h"
+            show_level_screen ();
             total_candies = 0;
             //draw_candy_level();
         }

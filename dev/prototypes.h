@@ -48,6 +48,7 @@ void boss3_clear_map(void);
 void boss3_init(void);
 void espera_musica (int espera);
 unsigned char wyz_song_over (void);
+void show_level_screen (void);
 
 // general.h
 unsigned char collide (void);
