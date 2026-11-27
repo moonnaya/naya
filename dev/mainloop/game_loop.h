@@ -179,6 +179,8 @@
 				} else {
 					PLAY_MUSIC (levels [level].music_id + slevel);
 				}
+				get_resource (MARCO_BIN, 16384);
+				print_points();
 				continue;
 			}
 		}

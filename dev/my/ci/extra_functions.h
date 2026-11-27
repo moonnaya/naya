@@ -317,7 +317,7 @@ void draw_player_sublives(void) {
 }
 
 void clear_gamezone() {
-	for (rda = 0; rda < 10; rda++) {
+	/*for (rda = 0; rda < 10; rda++) {
 		for (rdb = 0; rdb < 15; rdb ++) {
 			_x = rdb;
 			_y = rda;
@@ -325,7 +325,46 @@ void clear_gamezone() {
 			draw_invalidate_coloured_tile_gamearea ();
 			sp_UpdateNow ();
 		}
-	}
+	}*/
+    sp_UpdateNow ();                 // vuelca lo pendiente antes de tocar la pantalla
+
+	#asm
+		ld  e, 7                     ; 7 pasos: el color mas alto (7) llega a 0
+	.go_step
+		ld  hl, 22528                ; area de atributos
+		ld  bc, 768
+	.go_cell
+		ld  a, (hl)
+		and 63                       ; quita FLASH y BRIGHT
+		ld  d, a
+		and 7                        ; tinta
+		jr  z, go_ink
+		dec d                        ; tinta - 1
+	.go_ink
+		ld  a, d
+		and 56                       ; papel
+		jr  z, go_paper
+		ld  a, d
+		sub 8
+		ld  d, a                     ; papel - 1
+	.go_paper
+		ld  (hl), d
+		inc hl
+		dec bc
+		ld  a, b
+		or  c
+		jr  nz, go_cell
+
+		ld  bc, 8000                 ; pausa entre pasos (~60 ms)
+	.go_wait
+		dec bc
+		ld  a, b
+		or  c
+		jr  nz, go_wait
+
+		dec e
+		jr  nz, go_step
+	#endasm
 }
 
 void do_cutscene (unsigned char ini, unsigned char fin, unsigned char music) {
@@ -335,6 +374,7 @@ void do_cutscene (unsigned char ini, unsigned char fin, unsigned char music) {
 		blackout_area ();
 		get_resource (pic_resource[intro_iterator], 16384);
 		espera_activa (250);
+        cortina ();
 		sp_WaitForNoKey ();
 	}
 	blackout_area ();	

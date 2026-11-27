@@ -22,15 +22,15 @@ RESOURCE resources [] = {
     { 4, 0xEE08 },
     { 4, 0xF565 },
     { 6, 0xC000 },
-    { 6, 0xC6D5 },
-    { 6, 0xCC7C },
-    { 6, 0xD1F6 },
-    { 4, 0xFC3B },
-    { 6, 0xD61C },
+    { 6, 0xC689 },
+    { 6, 0xCC30 },
+    { 6, 0xD1AA },
+    { 4, 0xFC3A },
+    { 6, 0xD5D0 },
     { 3, 0xFD23 },
-    { 6, 0xD92B },
-    { 6, 0xDA09 },
-    { 6, 0xDAC2 }
+    { 6, 0xD8DF },
+    { 6, 0xD9BD },
+    { 6, 0xDA76 }
 };
 
 #define LEVEL3C_BIN                     0
@@ -43,8 +43,8 @@ RESOURCE resources [] = {
 #define TITLE_BIN                       7
 #define INTRO3_BIN                      8
 #define INTRO7_BIN                      9
-#define INTRO6_BIN                      10
-#define ENDING_BIN                      11
+#define ENDING_BIN                      10
+#define INTRO6_BIN                      11
 #define INTRO1_BIN                      12
 #define INTRO2_BIN                      13
 #define INTRO4_BIN                      14

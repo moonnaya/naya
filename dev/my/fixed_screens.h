@@ -20,10 +20,11 @@ void game_ending (void) {
 		unsigned char c = 0;
 		for (c = 0; c < 3; c++) {
 			get_resource (ending_screens[c], 16384);
-			espera_activa (500);
+			espera_activa (650);
 			cortina ();
 			blackout ();
 		}
+		STOP_SOUND();
 		blackout_area ();	
 	#else
 		#asm
@@ -50,10 +51,16 @@ void game_over (void) {
 	
 	clear_sprites();
 	clear_gamezone();
+
+	sp_UpdateNow();
+    get_resource (INTRO6_BIN, 16384);
+	espera_activa (200);
+	cortina();
+
 	
-	_x = 10; _y = 11; _t = 79; _gp_gen = spacer; print_str ();
-	_x = 10; _y = 12; _t = 79; _gp_gen = (unsigned char *)(" GAME OVER  "); print_str ();
-	_x = 10; _y = 13; _t = 79; _gp_gen = spacer; print_str ();
+	//_x = 10; _y = 11; _t = 79; _gp_gen = spacer; print_str ();
+	_x = 10; _y = 12; _t = 3; _gp_gen = (unsigned char *)("  GAME OVER  "); print_str ();
+	//_x = 10; _y = 13; _t = 79; _gp_gen = spacer; print_str ();
 	sp_UpdateNow ();
 
 	#ifdef MODE_128K
