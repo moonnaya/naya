@@ -169,7 +169,7 @@ void main (void) {
 					show_level_screen ();
 				}
 				silent_level = 0;
-			
+				
 				prepare_level ();				
 			#endif
 			
@@ -183,11 +183,11 @@ void main (void) {
 			n_pant = 27;
 			boss = 0;
 			boss_action = 0;
-                b_aux = 0;
-                boss_aux_1 = 1; //izq
-                boss_x = 12;
-                boss_y = 1;
-				boss_aux_2 = 1; // arriba
+			b_aux = 0;
+			boss_aux_1 = 1; //izq
+			boss_x = 12;
+			boss_y = 1;
+			boss_aux_2 = 1; // arriba
 			// Let's do it.
 
 			#include "mainloop/game_loop.h"

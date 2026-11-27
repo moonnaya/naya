@@ -26,9 +26,8 @@
 	level_str[12] = 49 + slevel;
 	_x = 8; _y = 12; _t = 71; _gp_gen = level_str; print_str ();
 	sp_UpdateNow ();
-
 	espera_musica (300);
-	PLAY_MUSIC (levels [level].music_id + slevel);
-	
+	clear_gamezone();
+	PLAY_MUSIC (levels [level].music_id + slevel);	
 }
 

@@ -374,7 +374,7 @@ void do_cutscene (unsigned char ini, unsigned char fin, unsigned char music) {
 		blackout_area ();
 		get_resource (pic_resource[intro_iterator], 16384);
 		espera_activa (250);
-        cortina ();
+        clear_gamezone();
 		sp_WaitForNoKey ();
 	}
 	blackout_area ();	

@@ -11,33 +11,33 @@ typedef struct {
 
 RESOURCE resources [] = {
     { 3, 0xC000 },
-    { 3, 0xCFCA },
-    { 3, 0xDF63 },
-    { 3, 0xEE68 },
+    { 3, 0xD00E },
+    { 3, 0xDFD8 },
+    { 3, 0xEF71 },
     { 4, 0xC000 },
-    { 4, 0xCEA5 },
-    { 4, 0xD717 },
-    { 4, 0xDF00 },
-    { 4, 0xE69B },
-    { 4, 0xEE08 },
-    { 4, 0xF565 },
+    { 4, 0xCEBB },
+    { 4, 0xD72D },
+    { 4, 0xDF16 },
+    { 4, 0xE6B1 },
+    { 4, 0xEE1E },
+    { 4, 0xF57B },
     { 6, 0xC000 },
     { 6, 0xC689 },
     { 6, 0xCC30 },
     { 6, 0xD1AA },
-    { 4, 0xFC3A },
+    { 4, 0xFC50 },
     { 6, 0xD5D0 },
-    { 3, 0xFD23 },
     { 6, 0xD8DF },
-    { 6, 0xD9BD },
-    { 6, 0xDA76 }
+    { 3, 0xFE76 },
+    { 6, 0xDB3F },
+    { 3, 0xFF54 }
 };
 
-#define LEVEL3C_BIN                     0
-#define LEVEL1C_BIN                     1
-#define LEVEL0C_BIN                     2
-#define LEVEL4C_BIN                     3
-#define LEVEL2C_BIN                     4
+#define LEVEL2C_BIN                     0
+#define LEVEL3C_BIN                     1
+#define LEVEL1C_BIN                     2
+#define LEVEL0C_BIN                     3
+#define LEVEL4C_BIN                     4
 #define ZONEA_BIN                       5
 #define ZONEB_BIN                       6
 #define TITLE_BIN                       7

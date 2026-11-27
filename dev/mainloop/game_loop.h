@@ -173,7 +173,7 @@
 				restart_level();
 				invalidate_viewport();
 				draw_player_sublives();
-				
+				draw_candy_level();
 				if (slevel == 3) {
 					PLAY_MUSIC (10);
 				} else {

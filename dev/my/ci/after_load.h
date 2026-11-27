@@ -9,6 +9,6 @@
         get_resource (splash_screens [gpit], 16384);
         espera_activa (500);
         wyz_play_sound (SFX_START);
-        cortina ();
+        clear_gamezone();
         blackout ();
     }

@@ -105,12 +105,14 @@ if (stage_clear_animation == 1) {
             draw_candy_level();
             max_shoots = 1;
         } else {
+            cortina();
             total_candies = 0;
             p_life = 2;
             max_shoots = 1;
             timer_t = 99;  
             show_level_screen ();
             total_candies = 0;
+            
             //draw_candy_level();
         }
         
@@ -119,6 +121,8 @@ if (stage_clear_animation == 1) {
 
         sp_UpdateNow();
         get_resource (MARCO_BIN, 16384);
+        print_points();
+        PLAY_MUSIC (levels [level].music_id + slevel);	
         }
     }
 }

@@ -55,7 +55,7 @@ void game_over (void) {
 	sp_UpdateNow();
     get_resource (INTRO6_BIN, 16384);
 	espera_activa (200);
-	cortina();
+	clear_gamezone();
 
 	
 	//_x = 10; _y = 11; _t = 79; _gp_gen = spacer; print_str ();
