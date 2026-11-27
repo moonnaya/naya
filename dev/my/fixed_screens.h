@@ -16,8 +16,15 @@ void game_ending (void) {
 	blackout ();
 	#ifdef MODE_128K
 		// Resource 2 = ending
-		get_resource (ENDING_BIN, 16384);
 		PLAY_MUSIC (13);
+		unsigned char c = 0;
+		for (c = 0; c < 3; c++) {
+			get_resource (ending_screens[c], 16384);
+			espera_activa (500);
+			cortina ();
+			blackout ();
+		}
+		blackout_area ();	
 	#else
 		#asm
 			ld hl, _s_ending

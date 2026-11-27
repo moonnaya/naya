@@ -44,6 +44,7 @@
 #define BOSS3_ENEMY_FIRST	4
 #define BOSS3_ENEMY_SECS	6
 #define BOSS3_ENEMY_OFF		20
+#define BOSS3_FLASH_FRAMES	8
 
 unsigned char boss3_state = B3_TOP;
 unsigned char boss3_tx = 0;			// objetivo horizontal (columna)
@@ -57,7 +58,8 @@ unsigned char boss3_cy = 0;
 
 unsigned char boss3_wait = 0;
 unsigned char boss3_last = 0;
-unsigned char boss3_enemy [10] = { 224, 96, 0, 96, 224, 96, 254, 0, 1, 2 };
+unsigned char boss3_enemy [10] = { 224, 112, 0, 112, 224, 112, 254, 0, 2, 2 };
+unsigned char boss3_flash = 0;
 
 void boss3_spawn (void) {
 	unsigned char *p;
@@ -65,6 +67,7 @@ void boss3_spawn (void) {
 	for (boss3_k = 0; boss3_k < 10; boss3_k ++) p [boss3_k] = boss3_enemy [boss3_k];
 	if (gpx >= 112) { p [0] = 0; p [6] = 2; }
 	en_an_state [2] = 0;
+    en_an_base_frame [2] = 2;
 }
 
 void boss3_enemy_hide (void) {
@@ -83,7 +86,10 @@ void boss3_paint (unsigned char mode) {
 		_y = boss_y - (boss3_k == 3);
 		if (mode == 2) _t = qtile (_x, _y);
 		else if (mode) _t = 44;
-		else _t = 39 + boss3_k;
+		else {
+			_t = 39 + boss3_k;
+			if (boss3_k == 3 && boss3_flash) _t = 44;
+		}
 		draw_invalidate_coloured_tile_gamearea ();
 	}
 }
@@ -126,6 +132,7 @@ void boss3_init (void) {
 	_en_life_boss = BOSS3_LIFE;
 
     boss3_enemy_hide ();
+    boss3_flash = 0;
 	boss3_wait = BOSS3_ENEMY_FIRST;
 	boss3_last = timer_t;
 
@@ -151,6 +158,9 @@ void boss3_hit (void) {
 		PLAY_MUSIC (1);
         boss3_enemy_hide ();
 		boss3_paint (1);
+	} else {
+		boss3_flash = BOSS3_FLASH_FRAMES;
+		boss3_paint (0);
 	}
 }
 
@@ -165,7 +175,7 @@ void boss3_check_hits (void) {
 				bullets_estado [boss3_i] = 0;
 				bullets_who [boss3_i] = 0;
 				if (shoots) shoots --;
-				boss3_hit ();
+				if (boss3_flash == 0) boss3_hit ();
 				if (boss3_state == B3_DYING) return;
 			}
 		}
@@ -219,8 +229,13 @@ void play_boss3 (void) {
         boss3_last = timer_t;
         if (boss3_wait) boss3_wait --;
 	}
-	if (((unsigned char *) malotes) [BOSS3_ENEMY_OFF + 8] == 1) boss3_wait = BOSS3_ENEMY_SECS;
+	if (((unsigned char *) malotes) [BOSS3_ENEMY_OFF + 8] == 2) boss3_wait = BOSS3_ENEMY_SECS;
 	else if (boss3_wait == 0) boss3_spawn ();
+
+    if (boss3_flash) {
+		boss3_flash --;
+		if (boss3_flash == 0) boss3_paint (0);
+	}
 
 	// Solo se puede herir durante el barrido bajo.
 	if (boss3_state == B3_LOW) {

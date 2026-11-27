@@ -10,6 +10,7 @@ const unsigned char pic_resource [] = {
 };
 
 const unsigned char splash_screens [] = { LOGO_BIN, DEDICADO_BIN };
+const unsigned char ending_screens [] = { ENDING_BIN, INTRO4_BIN, INTRO5_BIN};
 
 unsigned char boss = 1;
 unsigned char boss_1_lunge = BOSS_1_TIME_LUNGE;;

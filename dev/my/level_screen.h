@@ -4,6 +4,8 @@
 // This code is used to display the "new level" screen. You can customize it for your game:
 
 {
+	clear_sprites ();
+	sp_UpdateNow ();
 	blackout();
 	blackout_area ();
 	espera_activa (10);

@@ -271,6 +271,7 @@ void draw_player_lives(void) {
 }
 
 void save_object(void) {
+    objects[objects_index].gpit = p_tx + (p_ty * 15);
     objects[objects_index].x =  p_tx;
     objects[objects_index].y =  p_ty;
     objects[objects_index].n_pant = n_pant;
@@ -299,13 +300,13 @@ void check_points() {
     }
 }
 
+unsigned int pp_v;
+unsigned char pp_i;
 void print_points() {
-    unsigned int v;
-    unsigned char i;
-    v = points;
+    pp_v = points;
     _n = 5;
-    for (i = 30; i >= 26; i --) {
-        _x = i; _y = 0; _t = v % 10; v = v / 10;
+    for (pp_i = 30; pp_i >= 26; pp_i --) {
+        _x = pp_i; _y = 0; _t = pp_v % 10; pp_v = pp_v / 10;
         print_number_wan ();
     }
 }

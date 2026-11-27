@@ -22,15 +22,15 @@ RESOURCE resources [] = {
     { 4, 0xEE08 },
     { 4, 0xF565 },
     { 6, 0xC000 },
-    { 6, 0xC6D6 },
-    { 6, 0xCDAC },
-    { 6, 0xD419 },
-    { 6, 0xD9C0 },
-    { 4, 0xFC3E },
-    { 6, 0xDF3A },
+    { 6, 0xC6D5 },
+    { 6, 0xCC7C },
+    { 6, 0xD1F6 },
+    { 4, 0xFC3B },
+    { 6, 0xD61C },
     { 3, 0xFD23 },
-    { 3, 0xFF18 },
-    { 6, 0xE249 }
+    { 6, 0xD92B },
+    { 6, 0xDA09 },
+    { 6, 0xDAC2 }
 };
 
 #define LEVEL3C_BIN                     0
@@ -43,15 +43,15 @@ RESOURCE resources [] = {
 #define TITLE_BIN                       7
 #define INTRO3_BIN                      8
 #define INTRO7_BIN                      9
-#define ENDING_BIN                      10
-#define INTRO5_BIN                      11
-#define INTRO6_BIN                      12
-#define INTRO4_BIN                      13
-#define INTRO1_BIN                      14
-#define INTRO2_BIN                      15
-#define DEDICADO_BIN                    16
-#define CONTROLS_BIN                    17
-#define LOGO_BIN                        18
-#define MARCO_BIN                       19
-#define LEVEL_SCREEN_TSC_BIN            20
+#define INTRO6_BIN                      10
+#define ENDING_BIN                      11
+#define INTRO1_BIN                      12
+#define INTRO2_BIN                      13
+#define INTRO4_BIN                      14
+#define DEDICADO_BIN                    15
+#define CONTROLS_BIN                    16
+#define LOGO_BIN                        17
+#define MARCO_BIN                       18
+#define LEVEL_SCREEN_TSC_BIN            19
+#define INTRO5_BIN                      20
 

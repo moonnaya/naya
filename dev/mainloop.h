@@ -117,9 +117,7 @@ void main (void) {
 		points = 0;
 		max_shoots = 1;
 		objects_index = 0;
-		for (rda = 0; rda < 80; rda++) {
-			objects[rda].n_pant = 99; objects[rda].gpit = objects[rda].x = objects[rda].y = 255;
-		}
+		
 
 		//prepare_level();
 		// Here the title screen
