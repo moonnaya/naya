@@ -73,7 +73,7 @@
 	scf
 	ld	a, $ff
 	ld	ix, 24000
-	ld	de, 36989
+	ld	de, 36997
 	call $0556
 	di
 	

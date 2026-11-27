@@ -30,7 +30,7 @@ void main (void) {
 		#endif
 
 	#endif
-
+sp_Border (BLACK);
 	#include "my/ci/after_load.h"
 
 	cortina ();
