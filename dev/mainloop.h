@@ -30,14 +30,13 @@ void main (void) {
 		#endif
 
 	#endif
-sp_Border (BLACK);
+	sp_Border (BLACK);
 	#include "my/ci/after_load.h"
 
 	cortina ();
 	
 	// splib2 initialization
 	sp_Initialize (0, 0);
-	sp_Border (BLACK);
 	sp_AddMemory(0, NUMBLOCKS, 14, AD_FREE);
 	
 	// Load tileset

@@ -122,7 +122,7 @@ if (stage_clear_animation == 1) {
         sp_UpdateNow();
         get_resource (MARCO_BIN, 16384);
         print_points();
-        PLAY_MUSIC (levels [level].music_id + slevel);	
+        if (slevel < 3) PLAY_MUSIC (levels [level].music_id + slevel);	
         }
     }
 }
